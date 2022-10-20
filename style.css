@@ -1,27 +1,18 @@
 body {
-    margin: 0;
     display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: 30px auto 30px;
-    grid-template-areas: 
-    "header ."
-    "main ."
-    "footer .";
-    max-width: 678px;
-    height: 100vh;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
 }
 
-header {
-    grid-area: header;
+div {
     border: 2px solid red;
+    height: 500px;
 }
 
-main {
-    grid-area: main;
-    border: 2px solid red;
+.first {
+    grid-column: 2 / span 4;
 }
 
-footer {
-    grid-area: footer;
-    border: 2px solid red;
+.second {
+    grid-column: 6 / span 6;
 }
